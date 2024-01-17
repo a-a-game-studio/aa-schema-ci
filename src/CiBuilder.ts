@@ -83,13 +83,6 @@ export class CiSchema {
     /** CI */
     constructor(){}
 
-    /**  */
-    public rule(sString:string):CiRule{
-        const vCiRule = new CiRule(sString);
-
-        return vCiRule;
-    }
-
     /** Добавить правило */
     public set(sApp:string, sBranch:string, fBranch:TypeBranch){
         if(!this.ixBranch[sApp]){
