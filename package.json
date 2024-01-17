@@ -1,0 +1,41 @@
+{
+  "name": "@a-a-game-studio/aa-schema-ci",
+  "version": "0.0.1",
+  "description": "Base server application",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "engines": {
+    "node": ">=14"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-a-game-studio/aa-schema-ci.git"
+  },
+  "keywords": [
+    "core"
+  ],
+  "author": "a-a-game-studio",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/a-a-game-studio/aa-schema-ci/issues"
+  },
+  "homepage": "https://github.com/a-a-game-studio/aa-schema-ci#readme",
+  "peerDependencies": {},
+  "devDependencies": {
+    "@types/cookie": "^0.4.1",
+    "@types/node": "^14",
+    "@types/uuid": "^7.0.4",
+    "@types/ws": "^8.2.0",
+    "tsc-watch": "^4.5.0",
+    "typescript": "^4.4.4"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc-watch --outDir ./lib"
+  },
+  "dependencies": {
+  }
+}
