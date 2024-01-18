@@ -5,8 +5,9 @@
 npm run build
 git stage .
 git commit
-npm version patch 
 git push
+npm version patch 
+npm run build
 npm publish --access public
 
 
