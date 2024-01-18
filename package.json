@@ -1,6 +1,6 @@
 {
   "name": "@a-a-game-studio/aa-schema-ci",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Base server application",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
