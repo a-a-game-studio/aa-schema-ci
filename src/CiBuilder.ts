@@ -74,7 +74,7 @@ export class CiRule {
 }
 
 // Типизированная функция построения ветки
-export type TypeBranch = () => CiBranch;
+export type TypeBranch = (ci:CiBranch) => void;
 /** Конструктор схемы CI */
 export class CiSchema {
 
@@ -83,7 +83,7 @@ export class CiSchema {
     /** CI */
     constructor(){}
 
-    /** Добавить правило */
+    /** Добавить ветку */
     public set(sApp:string, sBranch:string, fBranch:TypeBranch){
         if(!this.ixBranch[sApp]){
             this.ixBranch[sApp] = {};
@@ -91,9 +91,11 @@ export class CiSchema {
         this.ixBranch[sApp][sBranch] = fBranch;
     }
 
-    /** получить правило */
+    /** получить ветку */
     public get(sApp:string, sBranch:string):CiBranch {
-        return this.ixBranch[sApp][sBranch]();
+        const ci = new CiBranch(sApp, sBranch);
+        this.ixBranch[sApp][sBranch](ci)
+        return ci;
     }
 
 }
